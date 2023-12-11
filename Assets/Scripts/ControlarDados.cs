@@ -22,10 +22,12 @@ public class ControlarDados : MonoBehaviour
     [SerializeField]private GameObject pontosJ1;
     [SerializeField]private GameObject pontosJ2;
     [SerializeField]private GameObject painelFinal;
+    [SerializeField] private GameObject painelBlur;
     [SerializeField] private GameObject voltarMenuPrincipal;
     void Start()
     {
         painelFinal.SetActive(false);
+        painelBlur.SetActive(false);
         controlarJogo.jogador1 = true;
         controlarJogo.rolagemLimite = 3;
         controlarJogo.contador = 1;
@@ -423,6 +425,7 @@ public class ControlarDados : MonoBehaviour
             botaoManterDado.interactable = false;
             botaoRolarDado.interactable = false;
             painelFinal.SetActive(true);
+            painelBlur.SetActive(true);
 
             voltarMenuPrincipal.GetComponent<Button>().onClick.AddListener(() =>
             {

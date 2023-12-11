@@ -15,6 +15,7 @@ public class PopupRegras : MonoBehaviour
     [SerializeField] private GameObject btnRight;
     [SerializeField] private GameObject btnLeft;
     [SerializeField] private GameObject panel;
+    [SerializeField] private GameObject panelBlur;
     [SerializeField] private Text panelText;
     
     const string TEXT_PAGE_1 = "1. O jogo consiste em 10 rodadas.\r\n\r\n2. cada jogador tem 3 chancs em cada rodada para pontuar atraves de combinacoes de dados.\r\n\r\n3. Ao final de cada rodada, os pontos sao armazenados em uma tabela que contem as pontuacoes comuns e especiais.\r\n\r\n4. ao final , soma-se os pontos e quem possuir maior pontuacao ganha.";
@@ -28,6 +29,7 @@ public class PopupRegras : MonoBehaviour
     {
         // Setting var
         this.panel.SetActive(false);
+        this.panelBlur.SetActive(false);
         isOpen = false;
         currentPage = 1;
 
@@ -36,6 +38,7 @@ public class PopupRegras : MonoBehaviour
             if (!isOpen)
             {
                 this.panel.SetActive(true);
+                this.panelBlur.SetActive(true);
                 isOpen = true;
             }
         });
@@ -45,6 +48,7 @@ public class PopupRegras : MonoBehaviour
             if (isOpen)
             {
                 this.panel.SetActive(false);
+                this.panelBlur.SetActive(false);
                 isOpen = false;
             }
         });

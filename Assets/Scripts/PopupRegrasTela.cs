@@ -28,7 +28,6 @@ public class RegrasPopupTela : MonoBehaviour
     {
         // Setting var
         this.panel.SetActive(true);
-        isOpen = true;
         currentPage = 1;
 
 
