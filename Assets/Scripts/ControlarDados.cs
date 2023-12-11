@@ -338,64 +338,46 @@ public class ControlarDados : MonoBehaviour
 
     void EncontrarNumerosRepetidos(int[] vetor)
     {
-        // Dicionário para armazenar a contagem de cada número
         Dictionary<int, int> contagemNumeros = new Dictionary<int, int>();
         System.Random rand = new System.Random();
-        // Percorre o vetor para contar a ocorrência de cada número
+
         foreach (int numero in vetor)
         {
             if (contagemNumeros.ContainsKey(numero))
             {
-                // Se o número já existe no dicionário, incrementa a contagem
                 contagemNumeros[numero]++;
             }
             else
             {
-                // Se o número não existe no dicionário, adiciona com contagem 1
                 contagemNumeros[numero] = 1;
             }
         }
 
+        int pontuacaoFinal = -1;
+        int facetaFinal = 0;
 
-        int res_for_aux_1 = -1;
-        int res_for_aux_2 = -1;
-        int ext_key_1 = 0;
-        int ext_key_2 = 0;
-        //Debug.Log("Números que se repetem:");
         foreach (var par in contagemNumeros)
         {
             if (par.Value > 1)
             {
-                //Debug.Log($"{par.Key} se repete {par.Value} vezes");
+                Debug.Log($"{par.Key} se repete {par.Value} vezes");
 
-                if (res_for_aux_1 == -1)
-                {
-                    res_for_aux_1 = par.Key * par.Value;
-                    ext_key_1 = par.Key;
+                int resultadoAtual = par.Key * par.Value;
 
-                }
-                else if (res_for_aux_2 == -1)
+                if (pontuacaoFinal == -1 || rand.Next(2) == 0)
                 {
-                    res_for_aux_2 = par.Key * par.Value;
-                    ext_key_2 = par.Key;
+                    pontuacaoFinal = resultadoAtual;
+                    facetaFinal = par.Key;
                 }
             }
         }
 
-        int nroSorteado = rand.Next(0, 2);
+        Pontuacao.aux = pontuacaoFinal;
+        Pontuacao.facetaDado = facetaFinal;
 
-        if (nroSorteado == 0)
-        {
-            Pontuacao.aux = res_for_aux_1;
-            Pontuacao.facetaDado = ext_key_1;
-            return;
-        }
 
-        Pontuacao.aux = res_for_aux_2;
-        Pontuacao.facetaDado = ext_key_2;
 
     }
-
     void zerarTodosOsDados()
     {
 

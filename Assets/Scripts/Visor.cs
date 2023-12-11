@@ -48,7 +48,7 @@ public class Visor
 
     public void changePontos(int index,int valor)
     {
-
+        /*
         if (getGameObjects[0].GetComponent<Text>().text == "1" && index == 0            ||
             getGameObjects[1]. GetComponent<Text>().text == "2" && index == 1              ||
             getGameObjects[2].GetComponent<Text>().text == "3" && index == 2            ||
@@ -60,9 +60,10 @@ public class Visor
             getGameObjects[8].GetComponent<Text>().text == "poker" && index == 8        ||
             getGameObjects[9].GetComponent<Text>().text == "general" && index == 9 )
         {
+        */
             getGameObjects[index].GetComponent<Text>().text = valor.ToString();
             getGameObjects[index].GetComponent<Text>().color = Color.white;
-        }
+        //}
     }
 
     public void modificarNaoPontuacao()
