@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+    guid: 996ce4a66d45d0246aeb284703ea72e8
+  - enabled: 1
+    path: Assets/Scenes/GeralScene.unity
+    guid: 40499ac3cd7dd3c439df93371353afe1
+  - enabled: 1
+    path: Assets/Scenes/jogoRodando.unity
+    guid: 57ffb683178589646b0f440f7ba1b8b4
+  - enabled: 1
+    path: Assets/Scenes/RegrasScene.unity
+    guid: ded94faba38e90e4b9849cafec4a6640
+  m_configObjects: {}
